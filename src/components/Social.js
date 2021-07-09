@@ -51,53 +51,58 @@ export default function Social() {
     return (
         <div className={classes.social}>
             <CssBaseline />
-            <Container fixed>
-                <Grid
-                    container
-                    direction="column"
-                    alignItems="right"
-                    justify="center"
-                    spacing={0}
-                    style={{ textAlign: 'right', minHeight: '100vh' }}
-                >
-                    <Grid item xs={0} md={12}>
+            <Grid
+                container
+                direction="column"
+                justifyContent="center"
+                spacing={0}
+                style={{ textAlign: 'right', minHeight: '100vh', }}
+            >
+                <Grid item xs={false} md={12}>
+                    <IconButton
+                        style={{ marginRight: '65px' }}
+                        data-aos={"slide-left"}
+                        data-aos-duration={"500"}
+                        onClick={() => window.open('https://github.com/mountaintew')}
+                    >
+                        <img src="social/github.svg" className={classes.socialIcons} />
+                    </IconButton>
+                </Grid>
+                <Grid item xs={false} md={12}>
+                    <IconButton
+                        style={{ marginRight: '65px' }}
+                        data-aos={"slide-left"}
+                        data-aos-duration={"700"}
+                        onClick={() => window.open('https://www.linkedin.com/in/lesterantonio/')}
+                    >
+                        <img src="social/linkedin.svg" className={classes.socialIcons} />
+                    </IconButton>
+                </Grid>
+                <Grid item xs={false} md={12}>
+                    <IconButton
+                        style={{ marginRight: '65px' }}
+                        data-aos={"slide-left"}
+                        data-aos-duration={"900"}
+                        onClick={() => window.open('https://web.facebook.com/lstrarana/')}
+                    >
+                        <img src="social/facebook.svg" className={classes.socialIcons} />
+                    </IconButton>
+                </Grid>
+                <Grid item xs={false} md={12}>
+                    <a href="mailto:6.lesterantonio@gmail.com">
                         <IconButton
-                            data-aos={"slide-left"}
-                            data-aos-duration={"500"}
-                            onClick={() => window.open('https://github.com/mountaintew')}
-                        >
-                            <img src="social/github.svg" className={classes.socialIcons} />
-                        </IconButton>
-                    </Grid>
-                    <Grid item xs={0} md={12}>
-                        <IconButton
-                            data-aos={"slide-left"}
-                            data-aos-duration={"700"}
-                            onClick={() => window.open('https://www.linkedin.com/in/lesterantonio/')}
-                        >
-                            <img src="social/linkedin.svg" className={classes.socialIcons} />
-                        </IconButton>
-                    </Grid>
-                    <Grid item xs={0} md={12}>
-                        <IconButton
-                            data-aos={"slide-left"}
-                            data-aos-duration={"900"}
-                            onClick={() => window.open('https://web.facebook.com/lstrarana/')}
-                        >
-                            <img src="social/facebook.svg" className={classes.socialIcons} />
-                        </IconButton>
-                    </Grid>
-                    <Grid item xs={0} md={12}>
-                        <IconButton
+                            style={{ marginRight: '65px' }}
                             data-aos={"slide-left"}
                             data-aos-duration={"1100"}
-                            onClick={() => window.open('mailto:6.lesterantonio@gmail.com')}
                         >
+
                             <img src="social/gmail.svg" className={classes.socialIcons} />
+
                         </IconButton>
-                    </Grid>
+                    </a>
                 </Grid>
-            </Container>
+            </Grid>
+
         </div>
     )
 }

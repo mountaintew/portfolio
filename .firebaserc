@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "lester-antonio",
+    "staging": "lester-antonio"
+  }
+}

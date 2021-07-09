@@ -158,9 +158,10 @@ export default function Navbar(props) {
                             onClose={handleClose}
                             TransitionComponent={Fade}
                             className={classes.menuStyle}
+                            color="transparent"
                         >
                             <MenuItem  onClick={handleClose} 
-                            style={{minWidth: '100vw'}}>
+                            style={{minWidth: '100vw',}}>
                                  <Typography >About</Typography>
                             </MenuItem>
                             <MenuItem onClick={handleClose} 

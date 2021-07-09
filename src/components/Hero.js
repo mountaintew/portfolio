@@ -3,6 +3,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import React, { useEffect } from 'react'
 import AOS from 'aos';
 import "aos/dist/aos.css";
+import { Link, animateScroll as scroll } from 'react-scroll';
+
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
@@ -66,14 +68,13 @@ export default function Hero() {
     }, []);
     return (
         <div style={{
-            marginBottom: '15%'
-        }}>
+            marginBottom: '15vh'
+        }} id="hero" >
             <Container className={classes.root} >
                 <Grid
                     container
                     direction="column"
-                    alignItems="left"
-                    justify="center"
+                    justifyContent="center"
                     spacing={0}
                     style={{ textAlign: 'left', minHeight: '80vh' }}
                 >
@@ -90,10 +91,18 @@ export default function Hero() {
                         <div className={classes.desc2} data-aos={"fade-up"} data-aos-duration={"2500"}>
                             I'm an ICT student developer who specializes in designing and creating websites that can contribute in many different ways.
                         </div>
-                        <Button className={classes.know} data-aos={"fade-up"} data-aos-duration={"2500"}>
-                            Know more about me
-                        </Button>
-
+                        <Link
+                            to="about"
+                            smooth={true}
+                            duration={500}
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                        >
+                            <Button className={classes.know} data-aos={"fade-up"} data-aos-duration={"2500"}>
+                                Know more about me
+                            </Button>
+                        </Link>
                     </Grid>
 
                 </Grid>
